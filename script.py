@@ -8,7 +8,7 @@ def create_table():
 	conn.close()
 
 def insert(item,quantity,price):
-	conn=psycopg2.connect("dbname='database1' user='postgres' password='yes123' host='localhost' port='5433'")
+	conn=psycopg2.connect("dbname='database1' user='postgres' password='' host='localhost' port='5433'")
 	cur = conn.cursor()
 	# cur.execute("INSERT INTO store VALUES('%s','%s','%s')" % (item,quantity,price))
 	cur.execute("INSERT INTO store VALUES(%s,%s,%s)", (item,quantity,price))
